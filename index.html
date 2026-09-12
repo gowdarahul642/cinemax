@@ -451,24 +451,31 @@ const IMG='https://image.tmdb.org/t/p/';
 
 // ── STREAMING SOURCES ─────────────────────────────────────────
 const SRCS=[
-  {name:'VidLink',note:'HD · Low ads',icon:'ti-player-play-filled',color:'#4ade80',
+  {name:'VidCore',note:'4K · Zero ads · Subtitles',icon:'ti-crown',color:'#4ade80',
+    movie:id=>`https://vidcore.org/embed/movie/${id}`,tv:(id,s,e)=>`https://vidcore.org/embed/tv/${id}/${s}/${e}`},
+  {name:'Embed-API',note:'10+ sources in 1 player',icon:'ti-stack-2',color:'#60a5fa',
+    movie:id=>`https://player.embed-api.stream/?id=${id}`,tv:(id,s,e)=>`https://player.embed-api.stream/?id=${id}&s=${s}&e=${e}`},
+  {name:'PrimeSrc',note:'77K movies · 275K episodes',icon:'ti-database',color:'#f472b6',
+    movie:id=>`https://primesrc.me/embed/movie/${id}`,tv:(id,s,e)=>`https://primesrc.me/embed/tv/${id}/${s}/${e}`},
+  {name:'VidLink',note:'HD · Reliable',icon:'ti-player-play-filled',color:'#fb923c',
     movie:id=>`https://vidlink.pro/movie/${id}`,tv:(id,s,e)=>`https://vidlink.pro/tv/${id}/${s}/${e}`},
-  {name:'Videasy',note:'Fast · Multi-server',icon:'ti-bolt',color:'#60a5fa',
-    movie:id=>`https://player.videasy.net/movie/${id}`,tv:(id,s,e)=>`https://player.videasy.net/tv/${id}/${s}/${e}`},
-  {name:'VidFast',note:'1080p · Reliable',icon:'ti-rocket',color:'#f472b6',
-    movie:id=>`https://vidfast.pro/movie/${id}`,tv:(id,s,e)=>`https://vidfast.pro/tv/${id}/${s}/${e}`},
-  {name:'AutoEmbed',note:'Multi-source',icon:'ti-refresh',color:'#fb923c',
-    movie:id=>`https://player.autoembed.cc/embed/movie/${id}`,tv:(id,s,e)=>`https://player.autoembed.cc/embed/tv/${id}/${s}/${e}`},
-  {name:'SuperEmbed',note:'10+ servers',icon:'ti-stack-2',color:'#a78bfa',
+  {name:'VidFast',note:'1080p · Fast CDN',icon:'ti-rocket',color:'#a78bfa',
+    movie:id=>`https://vidfast.vc/movie/${id}`,tv:(id,s,e)=>`https://vidfast.vc/tv/${id}/${s}/${e}`},
+  {name:'VIDEM',note:'Auto failover · No key needed',icon:'ti-movie',color:'#34d399',
+    movie:id=>`https://videm.xyz/embed/movie/${id}`,tv:(id,s,e)=>`https://videm.xyz/embed/tv/${id}/${s}/${e}`},
+  {name:'VidAPI',note:'Fast · TMDB native',icon:'ti-bolt',color:'#fbbf24',
+    movie:id=>`https://vaplayer.ru/embed/movie/${id}`,tv:(id,s,e)=>`https://vaplayer.ru/embed/tv/${id}/${s}/${e}`},
+  {name:'VidSrc.hair',note:'Multi-server · HLS',icon:'ti-antenna',color:'#38bdf8',
+    movie:id=>`https://vidsrc.hair/embed/movie?tmdb=${id}`,tv:(id,s,e)=>`https://vidsrc.hair/embed/tv?tmdb=${id}&season=${s}&episode=${e}`},
+  {name:'VidZee',note:'1080p/4K · May vary',icon:'ti-sparkles',color:'#e879f9',
+    movie:id=>`https://player.vidzee.wtf/embed/movie/${id}`,tv:(id,s,e)=>`https://player.vidzee.wtf/embed/tv/${id}/${s}/${e}`},
+  {name:'SuperEmbed',note:'10+ servers',icon:'ti-flame',color:'#f87171',
     movie:id=>`https://multiembed.mov/?video_id=${id}&tmdb=1`,tv:(id,s,e)=>`https://multiembed.mov/?video_id=${id}&tmdb=1&s=${s}&e=${e}`},
-  {name:'2Embed',note:'Movies & anime',icon:'ti-device-tv',color:'#34d399',
-    movie:id=>`https://www.2embed.cc/embed/${id}`,tv:(id,s,e)=>`https://www.2embed.cc/embedtv/${id}&s=${s}&e=${e}`},
-  {name:'SmashyStream',note:'Fast load',icon:'ti-flame',color:'#f87171',
-    movie:id=>`https://embed.smashystream.com/playere.php?tmdb=${id}`,tv:(id,s,e)=>`https://embed.smashystream.com/playere.php?tmdb=${id}&season=${s}&episode=${e}`},
-  {name:'VidSrc.icu',note:'Large library',icon:'ti-database',color:'#fbbf24',
-    movie:id=>`https://vidsrc.icu/embed/movie?tmdb=${id}`,tv:(id,s,e)=>`https://vidsrc.icu/embed/tv?tmdb=${id}&season=${s}&episode=${e}`}
+  {name:'CineSrc',note:'Minimal ads',icon:'ti-device-tv',color:'#cbd5e1',
+    movie:id=>`https://cinesrc.st/embed/movie/${id}`,tv:(id,s,e)=>`https://cinesrc.st/embed/tv/${id}/${s}/${e}`},
+  {name:'SmashyStream',note:'Fast load',icon:'ti-player-play',color:'#fb7185',
+    movie:id=>`https://embed.smashystream.com/playere.php?tmdb=${id}`,tv:(id,s,e)=>`https://embed.smashystream.com/playere.php?tmdb=${id}&season=${s}&episode=${e}`}
 ];
-
 // ── STATE ─────────────────────────────────────────────────────
 let hero=null,cur=null,curS=1,curE=1,prevTab='home',btype='movie',stimer=null;
 let wl=[];
