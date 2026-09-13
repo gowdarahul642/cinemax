@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0"/>
-<meta name="description" content="CINEMAX — Free movie and TV streaming. Watch Bollywood, South Indian, Hollywood and more."/>
-<title>CINEMAX — Free Movie & TV Streaming</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="description" content="CINEMAX — Free movie and TV streaming in English, Hindi, Tamil, Telugu and more."/>
+<title>CINEMAX — Free Movie &amp; TV Streaming</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.8.0/tabler-icons.min.css"/>
@@ -18,7 +18,7 @@
   --nav-h:52px;
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--tx);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden;padding-bottom:64px}
+body{background:var(--bg);color:var(--tx);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
 img{display:block;max-width:100%}
 button{cursor:pointer;font-family:inherit}
 ::-webkit-scrollbar{width:4px;height:4px}
@@ -27,261 +27,243 @@ button{cursor:pointer;font-family:inherit}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
-/* ── NAV ── */
-#nav{display:flex;align-items:center;gap:10px;padding:0 18px;height:var(--nav-h);background:rgba(9,9,14,.96);backdrop-filter:blur(18px);border-bottom:.5px solid var(--bd);position:sticky;top:0;z-index:300}
+/* NAV */
+#nav{display:flex;align-items:center;gap:10px;padding:0 16px;height:var(--nav-h);background:rgba(9,9,14,.96);backdrop-filter:blur(18px);border-bottom:.5px solid var(--bd);position:sticky;top:0;z-index:300}
 #logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--red);flex-shrink:0;cursor:pointer;user-select:none}
-#sw{flex:1;position:relative;max-width:320px}
-#si{width:100%;background:var(--s2);border:.5px solid var(--bd2);color:var(--tx);padding:7px 10px 7px 32px;border-radius:7px;font-size:13px;outline:none;transition:border-color .2s}
+#sw{flex:1;position:relative;max-width:300px}
+#si{width:100%;background:var(--s2);border:.5px solid var(--bd2);color:var(--tx);padding:7px 10px 7px 30px;border-radius:7px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s}
 #si::placeholder{color:var(--mt)}
 #si:focus{border-color:rgba(232,52,26,.5)}
-.sico{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--mt);font-size:15px;pointer-events:none}
+.sico{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--mt);font-size:14px;pointer-events:none}
 #ntabs{display:flex;gap:2px;margin-left:auto}
-.ntab{background:none;border:none;color:var(--mt);font-size:12px;padding:6px 11px;border-radius:6px;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:all .2s}
+.ntab{background:none;border:none;color:var(--mt);font-size:11px;font-family:'DM Sans',sans-serif;padding:5px 10px;border-radius:5px;cursor:pointer;display:flex;align-items:center;gap:4px;white-space:nowrap;transition:all .2s}
 .ntab:hover,.ntab.on{color:var(--tx);background:var(--s2)}
 #wlbadge{background:var(--red);color:#fff;font-size:9px;padding:1px 5px;border-radius:8px;display:none}
 
-/* ── MOBILE BOTTOM NAV ── */
-#mnav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:400;background:rgba(9,9,14,.97);backdrop-filter:blur(18px);border-top:.5px solid var(--bd);padding:5px 0 env(safe-area-inset-bottom,5px)}
-.mnbtn{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:none;color:var(--mt);font-size:9px;padding:5px 2px;transition:color .2s}
-.mnbtn i{font-size:20px}
-.mnbtn.on{color:var(--red)}
-
-/* ── PAGES ── */
+/* PAGES */
 .pg{display:none}.pg.on{display:block;animation:fadeUp .2s ease}
 
-/* ── HERO ── */
-#hero{position:relative;height:400px;overflow:hidden;display:flex;align-items:flex-end;padding:28px 18px}
+/* HERO */
+#hero{position:relative;height:380px;overflow:hidden;display:flex;align-items:flex-end;padding:26px 18px}
 #hbg{position:absolute;inset:0;background-size:cover;background-position:center 20%;filter:brightness(.36) saturate(1.1);transition:background-image .6s}
 #hg1{position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,rgba(9,9,14,.2) 55%,transparent 100%)}
 #hg2{position:absolute;inset:0;background:linear-gradient(to right,rgba(9,9,14,.75) 0%,transparent 58%)}
-#hc{position:relative;z-index:2;max-width:460px}
+#hc{position:relative;z-index:2;max-width:420px}
 #htag{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);font-weight:500;margin-bottom:7px;display:flex;align-items:center;gap:7px}
 #htag::before{content:'';width:18px;height:1px;background:var(--red)}
-#htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,6vw,50px);line-height:1;margin-bottom:8px}
-#hmeta{font-size:11px;color:var(--mt);margin-bottom:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#htitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,6vw,48px);line-height:1;margin-bottom:8px}
+#hmeta{font-size:11px;color:var(--mt);margin-bottom:9px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .hdot{width:2px;height:2px;border-radius:50%;background:var(--mt)}
-#hoverview{font-size:12px;color:rgba(232,228,220,.66);line-height:1.65;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;max-width:400px}
+#hoverview{font-size:12px;color:rgba(232,228,220,.66);line-height:1.6;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;max-width:380px}
 .hbtns{display:flex;gap:8px;flex-wrap:wrap}
-#hplay{background:var(--red);border:none;color:#fff;font-size:13px;font-weight:500;padding:9px 20px;border-radius:6px;display:inline-flex;align-items:center;gap:7px;transition:background .2s}
+#hplay{background:var(--red);border:none;color:#fff;font-size:12px;font-weight:500;padding:8px 18px;border-radius:5px;display:inline-flex;align-items:center;gap:6px;transition:background .2s}
 #hplay:hover{background:var(--red2)}
-#hwlbtn{background:rgba(255,255,255,.1);border:.5px solid var(--bd2);color:var(--tx);font-size:13px;padding:9px 14px;border-radius:6px;display:inline-flex;align-items:center;gap:6px;transition:background .2s}
+#hwlbtn{background:rgba(255,255,255,.1);border:.5px solid var(--bd2);color:var(--tx);font-size:12px;padding:8px 12px;border-radius:5px;display:inline-flex;align-items:center;gap:5px;transition:background .2s}
+#hwlbtn:hover{background:rgba(255,255,255,.17)}
 
-/* ── SECTIONS ── */
-.sec{padding:8px 18px 20px}
-.stitle{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;color:rgba(232,228,220,.8);margin-bottom:10px;display:flex;align-items:center;gap:9px}
+/* SECTION */
+.sec{padding:6px 18px 20px}
+.stitle{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;color:rgba(232,228,220,.8);margin-bottom:10px;display:flex;align-items:center;gap:8px}
 .stitle::after{content:'';flex:1;height:.5px;background:var(--bd)}
-.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:9px}
-.mc{cursor:pointer;border-radius:6px;overflow:hidden;transition:transform .18s;position:relative;background:var(--s1)}
-.mc:hover{transform:scale(1.05)}
-.mc:active{transform:scale(.97)}
-.mc img{width:100%;aspect-ratio:2/3;object-fit:cover;background:var(--s2)}
-.mci{padding:5px 5px 6px}
-.mct{font-size:11px;font-weight:500;color:rgba(232,228,220,.88);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mcs{font-size:10px;color:var(--mt)}
-.mcr{position:absolute;top:4px;right:4px;background:rgba(0,0,0,.82);color:#f5c518;font-size:9px;padding:2px 5px;border-radius:3px;font-weight:500}
-.mctype{position:absolute;top:4px;left:4px;background:rgba(232,52,26,.88);color:#fff;font-size:8px;font-weight:700;padding:2px 5px;border-radius:3px}
-.wbtn{position:absolute;bottom:34px;right:4px;background:rgba(0,0,0,.78);border:none;color:var(--mt);width:22px;height:22px;border-radius:50%;font-size:12px;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
-.mc:hover .wbtn,.wbtn.sv{opacity:1}
-.wbtn.sv{color:var(--red)}
 
-/* ── BROWSE ── */
-.grow{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
-.gp{background:var(--s2);border:.5px solid var(--bd2);color:var(--mt);font-size:11px;padding:5px 13px;border-radius:20px;transition:all .2s}
-.gp:hover,.gp.on{background:var(--red);border-color:var(--red);color:#fff}
-.trow{display:flex;gap:7px;margin-bottom:11px}
-.tp{background:var(--s2);border:.5px solid var(--bd2);color:var(--mt);font-size:11px;padding:5px 13px;border-radius:20px;transition:all .2s}
+/* GRID */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:9px}
+.mc{cursor:pointer;border-radius:5px;overflow:hidden;transition:transform .15s;position:relative;background:var(--s1)}
+.mc:hover{transform:scale(1.046)}
+.mc:active{transform:scale(.97)}
+.mc img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block;background:var(--s2)}
+.mci{padding:4px 5px 6px}
+.mct{font-size:10px;font-weight:500;color:rgba(232,228,220,.88);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mcs{font-size:9px;color:var(--mt)}
+.mcr{position:absolute;top:4px;right:4px;background:rgba(0,0,0,.82);color:#f5c518;font-size:9px;padding:2px 4px;border-radius:3px;font-weight:500}
+.mctype{position:absolute;top:4px;left:4px;background:rgba(232,52,26,.88);color:#fff;font-size:7px;font-weight:700;padding:2px 5px;border-radius:3px}
+.wbtn{position:absolute;bottom:32px;right:4px;background:rgba(0,0,0,.78);border:none;color:var(--mt);width:22px;height:22px;border-radius:50%;font-size:12px;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+.mc:hover .wbtn{opacity:1}
+.wbtn.sv{color:var(--red);opacity:1}
+
+/* BROWSE */
+.grow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.gp{background:var(--s2);border:.5px solid var(--bd2);color:var(--mt);font-size:10px;padding:4px 12px;border-radius:20px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.gp.on{background:var(--red);border-color:var(--red);color:#fff}
+.trow{display:flex;gap:6px;margin-bottom:10px}
+.tp{background:var(--s2);border:.5px solid var(--bd2);color:var(--mt);font-size:10px;padding:4px 12px;border-radius:20px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
 .tp.on{background:var(--s3);color:var(--tx)}
 
-/* ── LANGUAGES PAGE ── */
-#lang-pg{padding-bottom:20px}
-.lang-header{padding:20px 18px 0}
-.lang-header h2{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;margin-bottom:4px}
-.lang-header p{font-size:12px;color:var(--mt);margin-bottom:18px}
+/* ── LANGUAGE PAGE ───────────────────────────────────────── */
+#lang-pg{padding-bottom:60px}
+#lang-header{padding:20px 18px 0}
+#lang-header h2{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;margin-bottom:4px}
+#lang-header p{font-size:11px;color:var(--mt);margin-bottom:18px}
 
-/* LANGUAGE SELECTOR TABS */
-#lang-tabs{display:flex;gap:0;overflow-x:auto;padding:0 18px 14px;scrollbar-width:none;border-bottom:.5px solid var(--bd)}
-#lang-tabs::-webkit-scrollbar{display:none}
-.ltab{display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 16px;border-radius:10px;cursor:pointer;transition:all .2s;flex-shrink:0;border:none;background:none;color:var(--mt)}
-.ltab:hover{background:var(--s2);color:var(--tx)}
-.ltab.on{background:var(--s2);color:var(--tx)}
-.ltab-flag{font-size:26px;line-height:1}
-.ltab-name{font-size:10px;font-weight:500;white-space:nowrap}
-.ltab.on .ltab-name{color:var(--red)}
-.ltab-indicator{width:24px;height:2px;border-radius:2px;background:transparent;transition:background .2s}
-.ltab.on .ltab-indicator{background:var(--red)}
+/* LANGUAGE CARDS */
+.lang-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;padding:0 18px 20px}
+.lang-card{background:var(--s1);border:.5px solid var(--bd2);border-radius:9px;padding:16px 14px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+.lang-card:hover{background:var(--s2);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.lang-card:active{transform:scale(.97)}
+.lang-card.on{border-color:var(--lc,var(--red));background:rgba(232,52,26,.08)}
+.lang-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--lc,var(--red));opacity:0;transition:opacity .2s}
+.lang-card.on::before{opacity:1}
+.lang-flag{font-size:28px;margin-bottom:8px;display:block}
+.lang-name{font-size:13px;font-weight:500;color:var(--tx);margin-bottom:2px}
+.lang-native{font-size:10px;color:var(--mt);margin-bottom:6px}
+.lang-count{font-size:9px;color:var(--mt);background:var(--s3);padding:2px 7px;border-radius:10px;display:inline-block}
+.lang-selected-badge{position:absolute;top:8px;right:8px;background:var(--lc,var(--red));color:#fff;font-size:8px;font-weight:700;padding:2px 6px;border-radius:8px;display:none;letter-spacing:.5px}
+.lang-card.on .lang-selected-badge{display:block}
 
-/* LANGUAGE CONTENT */
-#lang-content{padding:0}
-.lang-section{padding:14px 18px 4px}
-.lang-badge{display:inline-flex;align-items:center;gap:6px;background:var(--s2);border:.5px solid var(--bd2);padding:5px 12px;border-radius:20px;margin-bottom:12px}
-.lang-badge-flag{font-size:16px}
-.lang-badge-name{font-size:11px;font-weight:500;color:var(--tx)}
-.lang-badge-note{font-size:10px;color:var(--mt)}
+/* LANG SECTION TITLE */
+.lang-sec-title{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:2px;color:var(--mt);padding:4px 18px 8px;display:flex;align-items:center;gap:8px}
+.lang-sec-title::after{content:'';flex:1;height:.5px;background:var(--bd)}
 
-/* GENRE FILTER ROW inside lang page */
-.lang-genres{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;margin-bottom:12px;scrollbar-width:none}
-.lang-genres::-webkit-scrollbar{display:none}
-.lgp{background:var(--s2);border:.5px solid var(--bd2);color:var(--mt);font-size:10px;padding:4px 12px;border-radius:20px;white-space:nowrap;flex-shrink:0;transition:all .2s}
-.lgp.on{background:var(--red);border-color:var(--red);color:#fff}
+/* AUDIO MODE TOGGLE */
+#audio-banner{margin:0 18px 16px;background:var(--s1);border:.5px solid var(--bd2);border-radius:8px;padding:12px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+#audio-banner i{font-size:18px;color:var(--red);flex-shrink:0}
+.audio-info{flex:1;min-width:0}
+.audio-info strong{font-size:12px;color:var(--tx);display:block;margin-bottom:2px}
+.audio-info span{font-size:10px;color:var(--mt);line-height:1.5;display:block}
+.audio-toggle-row{display:flex;gap:6px;margin-top:10px;width:100%}
+.audio-opt{flex:1;background:var(--s2);border:.5px solid var(--bd2);color:var(--mt);font-size:10px;font-family:'DM Sans',sans-serif;padding:6px 8px;border-radius:5px;cursor:pointer;text-align:center;transition:all .2s}
+.audio-opt.on{background:rgba(232,52,26,.15);border-color:rgba(232,52,26,.4);color:#f07060;font-weight:500}
 
-/* ── WATCHLIST ── */
-#wlpage{padding:20px 18px}
-#wlh{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;margin-bottom:4px}
-#wls{font-size:12px;color:var(--mt);margin-bottom:16px}
-#wlempty{text-align:center;padding:50px 20px;color:var(--mt);font-size:13px}
+/* WATCHLIST */
+#wlpage{padding:18px 18px 60px}
+#wlh{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;margin-bottom:4px}
+#wls{font-size:11px;color:var(--mt);margin-bottom:16px}
+#wlempty{text-align:center;padding:50px 16px;color:var(--mt);font-size:12px}
 #wlempty i{font-size:30px;display:block;margin-bottom:8px;opacity:.3}
 
-/* ── SEARCH ── */
-#spg{padding:16px 18px 50px}
-#slbl{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1.5px;color:var(--mt);margin-bottom:13px}
+/* SEARCH */
+#spg{padding:16px 18px 60px}
+#slbl{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1.5px;color:var(--mt);margin-bottom:12px}
 
-/* ── DETAIL PAGE ── */
-#dpage{padding-bottom:40px}
-#dbk{display:inline-flex;align-items:center;gap:6px;background:none;border:none;color:var(--mt);font-size:12px;padding:12px 18px;transition:color .2s}
+/* DETAIL PAGE */
+#dpage{padding-bottom:50px}
+#dbk{display:inline-flex;align-items:center;gap:5px;background:none;border:none;color:var(--mt);font-size:11px;font-family:'DM Sans',sans-serif;padding:12px 18px;cursor:pointer;transition:color .2s}
 #dbk:hover{color:var(--tx)}
-#dhero{position:relative;height:250px;overflow:hidden;display:flex;align-items:flex-end;padding:18px}
+#dhero{position:relative;height:240px;overflow:hidden;display:flex;align-items:flex-end;padding:18px}
 #dhbg{position:absolute;inset:0;background-size:cover;background-position:center 20%;filter:brightness(.3)}
-#dhg{position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,transparent 60%)}
+#dhg{position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,transparent 62%)}
 #dhs{position:absolute;inset:0;background:linear-gradient(to right,rgba(9,9,14,.7) 0%,transparent 52%)}
-#dhc{position:relative;z-index:2;display:flex;gap:16px;align-items:flex-end;width:100%}
-#dposter{width:80px;height:120px;object-fit:cover;border-radius:5px;flex-shrink:0;box-shadow:0 8px 28px rgba(0,0,0,.8)}
+#dhc{position:relative;z-index:2;display:flex;gap:14px;align-items:flex-end;width:100%}
+#dposter{width:75px;height:112px;object-fit:cover;border-radius:4px;flex-shrink:0;box-shadow:0 6px 24px rgba(0,0,0,.8)}
 #dinfo{flex:1;min-width:0}
-#dtitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,4vw,32px);line-height:1;margin-bottom:7px}
-#dmeta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;align-items:center}
-.db{font-size:10px;padding:2px 7px;border-radius:3px;background:var(--s2);color:var(--mt);border:.5px solid var(--bd2)}
+#dtitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,5vw,32px);line-height:1;margin-bottom:6px}
+#dmeta{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:7px;align-items:center}
+.db{font-size:9px;padding:2px 6px;border-radius:3px;background:var(--s2);color:var(--mt);border:.5px solid var(--bd2)}
 .db.gold{background:rgba(245,197,24,.12);color:#f5c518;border-color:transparent}
 .db.red{background:rgba(232,52,26,.15);color:#f07060;border-color:transparent}
-.db.lang{background:rgba(99,102,241,.18);color:#a5b4fc;border-color:transparent}
-#doverview{font-size:11px;line-height:1.6;color:rgba(232,228,220,.6);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.db.blue{background:rgba(96,165,250,.15);color:#93c5fd;border-color:transparent}
+#doverview{font-size:11px;line-height:1.55;color:rgba(232,228,220,.6);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 
-/* ── SOURCE PICKER ── */
+/* SOURCE SECTION */
 #srcsec{padding:16px 18px;background:var(--s1);border-top:.5px solid var(--bd);border-bottom:.5px solid var(--bd)}
-#srctop{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:7px}
-#srctitle{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;color:rgba(232,228,220,.8)}
-#srchint{font-size:10px;color:var(--mt);background:rgba(255,255,255,.05);border:.5px solid var(--bd2);padding:4px 10px;border-radius:4px;display:flex;align-items:center;gap:4px}
+#srctop{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;gap:6px;flex-wrap:wrap}
+#srctitle{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;color:rgba(232,228,220,.8)}
 
-/* LANGUAGE NOTICE */
-#lang-notice{background:rgba(99,102,241,.08);border:.5px solid rgba(99,102,241,.25);border-radius:7px;padding:10px 13px;display:flex;gap:9px;align-items:center;margin-bottom:12px;font-size:11px;color:rgba(232,228,220,.7);line-height:1.5}
-#lang-notice i{font-size:16px;color:#a5b4fc;flex-shrink:0}
-#lang-notice strong{color:var(--tx)}
+/* AUDIO INDICATOR */
+#audio-indicator{display:flex;align-items:center;gap:6px;background:var(--s2);border:.5px solid var(--bd2);padding:5px 10px;border-radius:5px;margin-bottom:12px;flex-wrap:wrap}
+#audio-indicator i{font-size:13px;color:var(--red)}
+#audio-indicator span{font-size:10px;color:var(--mt)}
+#audio-indicator strong{font-size:10px;color:var(--tx)}
 
-#infobanner{background:rgba(232,52,26,.07);border:.5px solid rgba(232,52,26,.2);border-radius:7px;padding:11px 13px;display:flex;gap:9px;align-items:flex-start;margin-bottom:12px;font-size:10px;color:rgba(232,228,220,.62);line-height:1.65}
-#infobanner i{font-size:15px;color:#f07060;flex-shrink:0;margin-top:1px}
+#infobanner{background:rgba(232,52,26,.06);border:.5px solid rgba(232,52,26,.18);border-radius:6px;padding:10px 12px;display:flex;gap:8px;align-items:flex-start;margin-bottom:12px}
+#infobanner i{font-size:14px;color:#f07060;flex-shrink:0;margin-top:1px}
+#infobanner p{font-size:10px;color:rgba(232,228,220,.62);line-height:1.6}
 #infobanner strong{color:rgba(232,228,220,.88)}
 
-#srcgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-bottom:13px}
-.srccard{background:var(--s2);border:.5px solid var(--bd2);border-radius:8px;padding:12px 13px;cursor:pointer;transition:all .2s;display:flex;flex-direction:column;gap:3px;position:relative;overflow:hidden}
-.srccard:hover{background:var(--s3);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.35)}
+#srcgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-bottom:12px}
+.srccard{background:var(--s2);border:.5px solid var(--bd2);border-radius:7px;padding:11px 12px;cursor:pointer;transition:all .2s;display:flex;flex-direction:column;gap:3px;position:relative;overflow:hidden}
+.srccard:hover{background:var(--s3);transform:translateY(-2px)}
 .srccard:active{transform:scale(.97)}
 .srccard::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--sc,#444);border-radius:3px 0 0 3px}
-.sc-icon{font-size:19px;color:var(--sc,#666);margin-bottom:3px}
-.sc-name{font-size:12px;font-weight:500;color:var(--tx)}
+.sc-icon{font-size:18px;color:var(--sc,#666);margin-bottom:3px}
+.sc-name{font-size:11px;font-weight:500;color:var(--tx)}
 .sc-note{font-size:9px;color:var(--mt)}
-
-#wlbtn2{display:inline-flex;align-items:center;gap:7px;font-size:12px;padding:8px 15px;border-radius:6px;transition:all .2s;background:var(--s2);border:.5px solid var(--bd2);color:var(--tx)}
+#wlbtn2{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-family:'DM Sans',sans-serif;padding:7px 13px;border-radius:5px;cursor:pointer;transition:all .2s;background:var(--s2);border:.5px solid var(--bd2);color:var(--tx)}
 #wlbtn2:hover{background:var(--s3)}
 #wlbtn2.sv{background:rgba(232,52,26,.15);border-color:rgba(232,52,26,.4);color:#f07060}
 
-/* ── EPISODES ── */
+/* EPISODES */
 #epsec{display:none;padding:14px 18px}
 #epsec.vis{display:block}
 .est{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;color:rgba(232,228,220,.8);margin-bottom:10px;display:flex;align-items:center;gap:8px}
 .est::after{content:'';flex:1;height:.5px;background:var(--bd)}
-#sbar{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:11px;overflow-x:auto;padding-bottom:3px}
-.sbn{background:var(--s2);border:.5px solid var(--bd2);color:var(--mt);font-size:11px;padding:4px 12px;border-radius:4px;white-space:nowrap;flex-shrink:0;font-family:'DM Sans',sans-serif;transition:all .2s}
+#sbar{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:11px;overflow-x:auto;padding-bottom:2px}
+.sbn{background:var(--s2);border:.5px solid var(--bd2);color:var(--mt);font-size:10px;padding:4px 11px;border-radius:4px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;flex-shrink:0;white-space:nowrap}
 .sbn.on{background:var(--red);border-color:var(--red);color:#fff}
 #epgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:7px}
-.epc{background:var(--s1);border:.5px solid var(--bd);border-radius:5px;padding:9px;cursor:pointer;display:flex;gap:9px;align-items:flex-start;transition:background .18s,border-color .18s}
+.epc{background:var(--s1);border:.5px solid var(--bd);border-radius:5px;padding:9px;cursor:pointer;display:flex;gap:8px;align-items:flex-start;transition:background .18s,border-color .18s}
 .epc:hover{background:var(--s2);border-color:var(--bd2)}
-.epc.on{border-color:var(--red);background:rgba(232,52,26,.09)}
-.epthumb{width:70px;height:43px;object-fit:cover;border-radius:3px;flex-shrink:0;background:var(--s3)}
+.epc:active{transform:scale(.98)}
+.epc.on{border-color:var(--red);background:rgba(232,52,26,.08)}
+.epthumb{width:68px;height:42px;object-fit:cover;border-radius:3px;flex-shrink:0;background:var(--s3)}
 .epinfo{flex:1;min-width:0}
-.epnum{font-size:9px;color:var(--red);font-weight:700;margin-bottom:2px;letter-spacing:.5px}
-.epname{font-size:11px;font-weight:500;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.epnum{font-size:8px;color:var(--red);font-weight:700;margin-bottom:2px;letter-spacing:.5px}
+.epname{font-size:10px;font-weight:500;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .epair{font-size:9px;color:var(--mt);margin-top:1px}
 
-/* ── UTILS ── */
-.spinner{text-align:center;padding:32px;color:var(--mt);font-size:12px}
-.spinner i{font-size:20px;display:block;margin:0 auto 6px;animation:spin 1s linear infinite}
-.emsg{text-align:center;padding:32px;color:var(--mt);font-size:12px}
-#toast{position:fixed;bottom:72px;right:16px;z-index:9999;background:var(--s3);border:.5px solid var(--bd2);color:var(--tx);font-size:12px;padding:9px 13px;border-radius:6px;display:flex;align-items:center;gap:7px;transform:translateY(40px);opacity:0;transition:all .25s;pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,.4)}
+/* UTILS */
+.spinner{text-align:center;padding:32px;color:var(--mt);font-size:11px}
+.spinner i{font-size:18px;display:block;margin:0 auto 6px;animation:spin 1s linear infinite}
+.emsg{text-align:center;padding:32px;color:var(--mt);font-size:11px}
+#toast{position:fixed;bottom:68px;right:16px;z-index:9999;background:var(--s3);border:.5px solid var(--bd2);color:var(--tx);font-size:11px;padding:8px 12px;border-radius:6px;display:flex;align-items:center;gap:7px;transform:translateY(40px);opacity:0;transition:all .25s;pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,.4)}
 #toast.on{transform:none;opacity:1}
 
-/* ── RESPONSIVE ── */
-@media(max-width:600px){
-  #ntabs{display:none}
-  #mnav{display:flex}
-  #sw{max-width:none}
-  .mgrid{grid-template-columns:repeat(auto-fill,minmax(95px,1fr));gap:7px}
-  .sec{padding:6px 14px 16px}
-  #hero{height:290px;padding:18px 14px}
-  #srcgrid{grid-template-columns:repeat(2,1fr)}
-  #srcsec,#epsec,.lang-header,#lang-tabs,#wlpage,#spg{padding-left:14px;padding-right:14px}
-  .lang-section{padding-left:14px;padding-right:14px}
-  #dhero{height:220px;padding:14px}
-  #dposter{width:68px;height:102px}
-  #toast{right:10px;left:10px;bottom:74px}
-  body{padding-bottom:64px}
-}
-@media(min-width:601px){
-  #mnav{display:none}
-  body{padding-bottom:0}
-  .mgrid{grid-template-columns:repeat(auto-fill,minmax(125px,1fr))}
-  #srcgrid{grid-template-columns:repeat(3,1fr)}
-  #toast{bottom:20px}
-}
-@media(min-width:900px){
-  #srcgrid{grid-template-columns:repeat(4,1fr)}
-  .mgrid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
-  .sec{padding:8px 24px 22px}
-  #srcsec,#epsec,.lang-header,#wlpage,#spg,#dbk{padding-left:24px;padding-right:24px}
-  #lang-tabs{padding-left:24px;padding-right:24px}
-  .lang-section{padding-left:24px;padding-right:24px}
-  #dhero{padding:22px 24px}
-  #hero{height:420px}
-  #epgrid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-}
-/* ── LANGUAGE CARDS ───────────────────────────────────────── */
-.langcard {
-  cursor: pointer;
-  border-radius: 10px;
-  padding: 18px 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  border: .5px solid var(--bd2);
-  transition: transform .18s, box-shadow .2s;
-  position: relative;
-  overflow: hidden;
-  background: var(--s2);
-}
-.langcard:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,.45); }
-.langcard:active { transform: scale(0.97); }
-.langcard::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--lc, #333);
-  opacity: .12;
-}
-.langcard-flag { font-size: 32px; line-height: 1; }
-.langcard-name { font-size: 13px; font-weight: 500; color: var(--tx); text-align: center; }
-.langcard-native { font-size: 10px; color: var(--mt); text-align: center; }
-.langcard-count { font-size: 9px; background: rgba(255,255,255,.08); color: var(--mt); padding: 2px 7px; border-radius: 10px; }
+/* MOBILE BOTTOM NAV */
+#mobile-nav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:400;background:rgba(9,9,14,.97);backdrop-filter:blur(18px);border-top:.5px solid var(--bd);padding:5px 0 env(safe-area-inset-bottom,5px)}
+.mnav-btn{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:none;color:var(--mt);font-size:8px;font-family:'DM Sans',sans-serif;padding:5px 4px;cursor:pointer;transition:color .2s}
+.mnav-btn i{font-size:19px}
+.mnav-btn.on{color:var(--red)}
 
-@media(max-width:600px) {
-  #lang-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 8px !important; }
-  .langcard { padding: 14px 8px; }
-  .langcard-flag { font-size: 26px; }
-  .langcard-name { font-size: 11px; }
-  .langcard-native { display: none; }
+/* RESPONSIVE */
+@media(max-width:600px){
+  :root{--nav-h:46px}
+  #ntabs{display:none}
+  #mobile-nav{display:flex}
+  #sw{max-width:none}
+  body{padding-bottom:58px}
+  #hero{height:290px;padding:18px 14px}
+  .mgrid{grid-template-columns:repeat(auto-fill,minmax(95px,1fr));gap:7px}
+  .sec{padding:5px 14px 16px}
+  #dhero{height:210px;padding:14px}
+  #dposter{width:65px;height:97px}
+  #srcgrid{grid-template-columns:repeat(2,1fr)}
+  #srcsec,#epsec,#lang-header{padding-left:14px;padding-right:14px}
+  .lang-grid{grid-template-columns:repeat(2,1fr);padding:0 14px 16px}
+  #audio-banner{margin:0 14px 14px}
+  #spg{padding:14px 14px 70px}
+  #wlpage{padding:14px 14px 70px}
+  #toast{bottom:72px;right:12px;left:12px}
+  #epgrid{grid-template-columns:1fr}
+  #dbk{padding:10px 14px}
+}
+@media(min-width:601px) and (max-width:900px){
+  #mobile-nav{display:none}
+  .mgrid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
+  #srcgrid{grid-template-columns:repeat(3,1fr)}
+  .lang-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:901px){
+  #mobile-nav{display:none}
+  #hero{height:420px}
+  .mgrid{grid-template-columns:repeat(auto-fill,minmax(135px,1fr))}
+  #srcgrid{grid-template-columns:repeat(4,1fr)}
+  .lang-grid{grid-template-columns:repeat(5,1fr)}
+  .sec{padding:8px 24px 22px}
+  #nav{padding:0 24px}
+  #srcsec,#epsec{padding:18px 24px}
+  #lang-header{padding:22px 24px 0}
+  .lang-grid{padding:0 24px 22px}
+  #audio-banner{margin:0 24px 16px}
+  #dhero{padding:22px}
+  #spg{padding:20px 24px 60px}
+  #wlpage{padding:22px 24px}
+  #dbk{padding:14px 24px}
+  #toast{bottom:24px}
 }
 </style>
 </head>
 <body>
 
-<!-- TOP NAV -->
 <nav id="nav">
   <div id="logo" onclick="go('home')">CINEMAX</div>
   <div id="sw"><i class="ti ti-search sico"></i><input type="text" id="si" placeholder="Search movies &amp; TV…" autocomplete="off"/></div>
@@ -289,24 +271,20 @@ button{cursor:pointer;font-family:inherit}
     <button class="ntab on" data-tab="home" onclick="switchTab('home')"><i class="ti ti-home"></i> Home</button>
     <button class="ntab" data-tab="browse" onclick="switchTab('browse')"><i class="ti ti-compass"></i> Browse</button>
     <button class="ntab" data-tab="lang" onclick="switchTab('lang')"><i class="ti ti-language"></i> Languages</button>
-    <button class="ntab" data-tab="languages" onclick="switchTab('languages')"><i class="ti ti-world" aria-hidden="true"></i> Languages</button>
     <button class="ntab" data-tab="watchlist" onclick="switchTab('watchlist')"><i class="ti ti-bookmark"></i> Saved <span id="wlbadge"></span></button>
   </div>
 </nav>
 
-<!-- MOBILE BOTTOM NAV -->
-<nav id="mnav">
-  <button class="mnbtn on" data-tab="home" onclick="switchTab('home')"><i class="ti ti-home"></i>Home</button>
-  <button class="mnbtn" data-tab="browse" onclick="switchTab('browse')"><i class="ti ti-compass"></i>Browse</button>
-  <button class="mnbtn" data-tab="lang" onclick="switchTab('lang')"><i class="ti ti-language"></i>Languages</button>
-  <button class="mnav-btn" data-tab="languages" onclick="switchTab('languages')"><i class="ti ti-world" aria-hidden="true"></i>Languages</button>
-  <button class="mnbtn" data-tab="watchlist" onclick="switchTab('watchlist')"><i class="ti ti-bookmark"></i>Saved <span id="wlbadge2"></span></button>
+<nav id="mobile-nav">
+  <button class="mnav-btn on" data-tab="home" onclick="switchTab('home')"><i class="ti ti-home"></i>Home</button>
+  <button class="mnav-btn" data-tab="browse" onclick="switchTab('browse')"><i class="ti ti-compass"></i>Browse</button>
+  <button class="mnav-btn" data-tab="lang" onclick="switchTab('lang')"><i class="ti ti-language"></i>Languages</button>
+  <button class="mnav-btn" data-tab="watchlist" onclick="switchTab('watchlist')"><i class="ti ti-bookmark"></i>Saved<span id="wlbadge2"></span></button>
 </nav>
 
 <!-- HOME -->
 <main id="home-pg" class="pg on">
-  <section id="hero">
-    <div id="hbg"></div><div id="hg1"></div><div id="hg2"></div>
+  <div id="hero"><div id="hbg"></div><div id="hg1"></div><div id="hg2"></div>
     <div id="hc">
       <div id="htag">Trending</div>
       <h1 id="htitle">Loading…</h1>
@@ -317,7 +295,7 @@ button{cursor:pointer;font-family:inherit}
         <button id="hwlbtn" onclick="heroWL()"><i class="ti ti-bookmark" id="hwlico"></i> Save</button>
       </div>
     </div>
-  </section>
+  </div>
   <div class="sec"><div class="stitle">Trending Movies</div><div class="mgrid" id="tr-movies"><div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div></div></div>
   <div class="sec"><div class="stitle">Popular TV Shows</div><div class="mgrid" id="tr-tv"><div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div></div></div>
   <div class="sec"><div class="stitle">Top Rated Films</div><div class="mgrid" id="toprated"><div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div></div></div>
@@ -325,116 +303,47 @@ button{cursor:pointer;font-family:inherit}
 
 <!-- BROWSE -->
 <main id="browse-pg" class="pg">
-  <div class="sec" style="padding-top:18px">
+  <div class="sec" style="padding-top:16px">
     <div class="stitle">Browse Content</div>
     <div class="trow"><button class="tp on" onclick="setBT('movie',this)">Movies</button><button class="tp" onclick="setBT('tv',this)">TV Shows</button></div>
     <div class="grow" id="grow"></div>
     <div class="mgrid" id="bgrid"><div class="spinner"><i class="ti ti-loader-2"></i>Pick a genre…</div></div>
   </div>
-  <!-- ── LANGUAGES PAGE ──────────────────────────────────────── -->
-<main id="languages-pg" class="pg" role="main">
-  <div class="sec" style="padding-top:20px">
-    <div class="stitle">Browse by Language</div>
-
-    <!-- LANGUAGE CARDS -->
-    <div id="lang-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-bottom:24px">
-      <!-- generated by JS -->
-    </div>
-
-    <!-- SELECTED LANGUAGE MOVIES -->
-    <div id="lang-results" style="display:none">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-        <button id="lang-back-btn" style="background:none;border:none;color:var(--mt);font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;display:flex;align-items:center;gap:5px;padding:0" onclick="showLangPicker()">
-          <i class="ti ti-arrow-left" aria-hidden="true"></i> All Languages
-        </button>
-        <div class="stitle" style="margin:0;flex:1" id="lang-results-title"></div>
-      </div>
-
-      <!-- SORT BAR -->
-      <div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px" id="lang-sort-bar">
-        <button class="gp on" onclick="setLangSort('popularity.desc',this)">🔥 Popular</button>
-        <button class="gp" onclick="setLangSort('vote_average.desc',this)">⭐ Top Rated</button>
-        <button class="gp" onclick="setLangSort('release_date.desc',this)">🆕 Newest</button>
-        <button class="gp" onclick="setLangSort('revenue.desc',this)">💰 Highest Grossing</button>
-      </div>
-
-      <div class="mgrid" id="lang-movies-grid">
-        <div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div>
-      </div>
-
-      <!-- LOAD MORE -->
-      <div style="text-align:center;margin-top:18px">
-        <button id="lang-load-more" style="display:none;background:var(--s2);border:.5px solid var(--bd2);color:var(--tx);font-size:12px;font-family:'DM Sans',sans-serif;padding:9px 24px;border-radius:6px;cursor:pointer" onclick="loadMoreLang()">
-          Load More
-        </button>
-      </div>
-    </div>
-  </div>
-</main>
 </main>
 
-<!-- LANGUAGES -->
+<!-- LANGUAGE PAGE -->
 <main id="lang-pg" class="pg">
-  <div class="lang-header">
+  <div id="lang-header">
     <h2>Languages</h2>
-    <p>Pick a language to browse movies in that language. Audio is auto-selected to match.</p>
+    <p>Pick a language to browse movies in that language. Your selection also sets the default audio track.</p>
   </div>
 
-  <!-- LANGUAGE TABS -->
-  <div id="lang-tabs">
-    <button class="ltab on" onclick="selectLang(this,'hi','Hindi')">
-      <span class="ltab-flag">🇮🇳</span>
-      <span class="ltab-name">Hindi</span>
-      <span class="ltab-indicator"></span>
-    </button>
-    <button class="ltab" onclick="selectLang(this,'ta','Tamil')">
-      <span class="ltab-flag">🎬</span>
-      <span class="ltab-name">Tamil</span>
-      <span class="ltab-indicator"></span>
-    </button>
-    <button class="ltab" onclick="selectLang(this,'te','Telugu')">
-      <span class="ltab-flag">🎭</span>
-      <span class="ltab-name">Telugu</span>
-      <span class="ltab-indicator"></span>
-    </button>
-    <button class="ltab" onclick="selectLang(this,'kn','Kannada')">
-      <span class="ltab-flag">🌟</span>
-      <span class="ltab-name">Kannada</span>
-      <span class="ltab-indicator"></span>
-    </button>
-    <button class="ltab" onclick="selectLang(this,'ml','Malayalam')">
-      <span class="ltab-flag">🌴</span>
-      <span class="ltab-name">Malayalam</span>
-      <span class="ltab-indicator"></span>
-    </button>
-    <button class="ltab" onclick="selectLang(this,'en','English')">
-      <span class="ltab-flag">🌍</span>
-      <span class="ltab-name">English</span>
-      <span class="ltab-indicator"></span>
-    </button>
-    <button class="ltab" onclick="selectLang(this,'ko','Korean')">
-      <span class="ltab-flag">🇰🇷</span>
-      <span class="ltab-name">Korean</span>
-      <span class="ltab-indicator"></span>
-    </button>
-    <button class="ltab" onclick="selectLang(this,'ja','Japanese')">
-      <span class="ltab-flag">🇯🇵</span>
-      <span class="ltab-name">Japanese</span>
-      <span class="ltab-indicator"></span>
-    </button>
-    <button class="ltab" onclick="selectLang(this,'es','Spanish')">
-      <span class="ltab-flag">🇪🇸</span>
-      <span class="ltab-name">Spanish</span>
-      <span class="ltab-indicator"></span>
-    </button>
-  </div>
-
-  <!-- LANGUAGE CONTENT -->
-  <div id="lang-content">
-    <div class="lang-section">
-      <div id="lang-genre-row" class="lang-genres"></div>
-      <div class="mgrid" id="lang-grid"><div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div></div>
+  <div id="audio-banner">
+    <i class="ti ti-headphones"></i>
+    <div class="audio-info">
+      <strong>Audio Preference</strong>
+      <span>When a dubbed track is available, the player will automatically switch to your preferred audio.</span>
     </div>
+    <div class="audio-toggle-row">
+      <button class="audio-opt on" id="opt-original" onclick="setAudioPref('original',this)">🔊 Original Language</button>
+      <button class="audio-opt" id="opt-hindi" onclick="setAudioPref('hi',this)">🇮🇳 Hindi Dubbed</button>
+      <button class="audio-opt" id="opt-english" onclick="setAudioPref('en',this)">🇬🇧 English Dubbed</button>
+    </div>
+  </div>
+
+  <div class="lang-sec-title">Indian Languages</div>
+  <div class="lang-grid" id="indian-langs"></div>
+
+  <div class="lang-sec-title">World Languages</div>
+  <div class="lang-grid" id="world-langs"></div>
+
+  <div class="sec" id="lang-movies-sec" style="display:none">
+    <div class="stitle" id="lang-movies-title">Movies</div>
+    <div class="mgrid" id="lang-movies-grid"><div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div></div>
+  </div>
+  <div class="sec" id="lang-tv-sec" style="display:none">
+    <div class="stitle" id="lang-tv-title">TV Shows</div>
+    <div class="mgrid" id="lang-tv-grid"></div>
   </div>
 </main>
 
@@ -442,8 +351,8 @@ button{cursor:pointer;font-family:inherit}
 <main id="watchlist-pg" class="pg">
   <div id="wlpage">
     <div id="wlh">My Watchlist</div>
-    <p id="wls">Movies and shows saved for later.</p>
-    <div id="wlcontent"><div id="wlempty"><i class="ti ti-bookmark-off"></i>Nothing saved yet.<br/>Tap the bookmark icon on any card.</div></div>
+    <div id="wls">Movies and shows you've saved.</div>
+    <div id="wlcontent"><div id="wlempty"><i class="ti ti-bookmark-off"></i>Nothing saved yet.</div></div>
   </div>
 </main>
 
@@ -452,39 +361,42 @@ button{cursor:pointer;font-family:inherit}
   <div id="spg"><div id="slbl">Search Results</div><div class="mgrid" id="sgrid"></div></div>
 </main>
 
-<!-- DETAIL + SOURCE PICKER -->
+<!-- DETAIL -->
 <main id="detail-pg" class="pg">
   <button id="dbk" onclick="goBack()"><i class="ti ti-arrow-left"></i> Back</button>
-  <section id="dhero">
-    <div id="dhbg"></div><div id="dhg"></div><div id="dhs"></div>
+  <div id="dhero"><div id="dhbg"></div><div id="dhg"></div><div id="dhs"></div>
     <div id="dhc">
       <img id="dposter" src="" alt=""/>
-      <div id="dinfo">
-        <h2 id="dtitle"></h2>
-        <div id="dmeta"></div>
-        <p id="doverview"></p>
-      </div>
+      <div id="dinfo"><div id="dtitle"></div><div id="dmeta"></div><div id="doverview"></div></div>
     </div>
-  </section>
+  </div>
 
-  <section id="srcsec">
+  <div id="srcsec">
     <div id="srctop">
-      <div id="srctitle">Choose a Source</div>
-      <div id="srchint"><i class="ti ti-external-link" style="font-size:10px"></i> Opens in new tab</div>
+      <div id="srctitle">Choose a Streaming Source</div>
+      <div style="font-size:10px;color:var(--mt);display:flex;align-items:center;gap:4px"><i class="ti ti-external-link" style="font-size:10px"></i> Opens in new tab</div>
     </div>
-    <div id="lang-notice"><i class="ti ti-headphones"></i><span id="lang-notice-text">Auto language detected</span></div>
-    <div id="infobanner"><i class="ti ti-info-circle"></i><p><strong>How to watch:</strong> Tap any source — it opens in a new tab. If one doesn't work, try the next one. All free.</p></div>
-    <div id="srcgrid" role="list"></div>
+    <div id="audio-indicator">
+      <i class="ti ti-volume"></i>
+      <span>Audio:</span>
+      <strong id="audio-label">Auto</strong>
+      <span style="margin-left:auto;cursor:pointer;color:var(--red)" onclick="switchTab('lang')"><i class="ti ti-settings" style="font-size:11px"></i> Change</span>
+    </div>
+    <div id="infobanner">
+      <i class="ti ti-info-circle"></i>
+      <p><strong>How to watch:</strong> Tap any source — it opens in a new tab ready to play. If one doesn't work, try the next one. All are free.</p>
+    </div>
+    <div id="srcgrid"></div>
     <button id="wlbtn2" onclick="toggleWLcur()"><i class="ti ti-bookmark" id="wlico2"></i><span id="wltxt2">Save to Watchlist</span></button>
-  </section>
+  </div>
 
-  <section id="epsec">
-    <div class="est">Episodes</div>
+  <div id="epsec">
+    <div class="est">Pick an Episode</div>
     <div id="sbar"></div>
     <div id="epgrid"></div>
-  </section>
+  </div>
 
-  <div class="sec" style="padding-top:16px">
+  <div class="sec" style="padding-top:14px">
     <div class="stitle">You Might Also Like</div>
     <div class="mgrid" id="relgrid"></div>
   </div>
@@ -493,427 +405,278 @@ button{cursor:pointer;font-family:inherit}
 <div id="toast"><i class="ti ti-check" id="tico"></i><span id="tmsg"></span></div>
 
 <script>
-const KEY = '8265bd1679663a7ea12ac168da84d2e8';
-const TMDB = 'https://api.themoviedb.org/3';
-const IMG  = 'https://image.tmdb.org/t/p/';
+const KEY='8265bd1679663a7ea12ac168da84d2e8';
+const TMDB='https://api.themoviedb.org/3';
+const IMG='https://image.tmdb.org/t/p/';
 
-// ── LANGUAGE CONFIG ─────────────────────────────────────────
-const LANGS = {
-  hi: { name:'Hindi',    flag:'🇮🇳', audio:'hi', note:'Hindi audio' },
-  ta: { name:'Tamil',    flag:'🎬',  audio:'hi', note:'Hindi dub available' },
-  te: { name:'Telugu',   flag:'🎭',  audio:'hi', note:'Hindi dub available' },
-  kn: { name:'Kannada',  flag:'🌟',  audio:'hi', note:'Hindi dub available' },
-  ml: { name:'Malayalam',flag:'🌴',  audio:'hi', note:'Hindi dub available' },
-  en: { name:'English',  flag:'🌍',  audio:'en', note:'English audio' },
-  ko: { name:'Korean',   flag:'🇰🇷', audio:'ko', note:'Korean / English sub' },
-  ja: { name:'Japanese', flag:'🇯🇵', audio:'ja', note:'Japanese / English sub' },
-  es: { name:'Spanish',  flag:'🇪🇸', audio:'es', note:'Spanish audio' },
-};
+// ── LANGUAGE CONFIG ───────────────────────────────────────────
+const INDIAN_LANGS=[
+  {code:'hi',name:'Hindi',native:'हिन्दी',flag:'🇮🇳',color:'#f97316',desc:'Bollywood & more'},
+  {code:'ta',name:'Tamil',native:'தமிழ்',flag:'🎬',color:'#e11d48',desc:'Kollywood'},
+  {code:'te',name:'Telugu',native:'తెలుగు',flag:'🎭',color:'#7c3aed',desc:'Tollywood'},
+  {code:'kn',name:'Kannada',native:'ಕನ್ನಡ',flag:'🌟',color:'#0891b2',desc:'Sandalwood'},
+  {code:'ml',name:'Malayalam',native:'മലയാളം',flag:'🏝️',color:'#059669',desc:'Mollywood'},
+  {code:'mr',name:'Marathi',native:'मराठी',flag:'🎪',color:'#d97706',desc:'Marathi Cinema'},
+  {code:'pa',name:'Punjabi',native:'ਪੰਜਾਬੀ',flag:'🎵',color:'#db2777',desc:'Punjabi Films'},
+  {code:'bn',name:'Bengali',native:'বাংলা',flag:'🌸',color:'#16a34a',desc:'Bengali Cinema'},
+];
+const WORLD_LANGS=[
+  {code:'en',name:'English',native:'English',flag:'🇺🇸',color:'#3b82f6',desc:'Hollywood'},
+  {code:'ko',name:'Korean',native:'한국어',flag:'🇰🇷',color:'#6366f1',desc:'K-Drama & Film'},
+  {code:'ja',name:'Japanese',native:'日本語',flag:'🇯🇵',color:'#ef4444',desc:'Anime & J-Film'},
+  {code:'zh',name:'Chinese',native:'中文',flag:'🇨🇳',color:'#f59e0b',desc:'Chinese Cinema'},
+  {code:'fr',name:'French',native:'Français',flag:'🇫🇷',color:'#0ea5e9',desc:'French Cinema'},
+  {code:'es',name:'Spanish',native:'Español',flag:'🇪🇸',color:'#f97316',desc:'Spanish Film'},
+  {code:'tr',name:'Turkish',native:'Türkçe',flag:'🇹🇷',color:'#dc2626',desc:'Turkish Dramas'},
+  {code:'th',name:'Thai',native:'ภาษาไทย',flag:'🇹🇭',color:'#8b5cf6',desc:'Thai Cinema'},
+];
+const ALL_LANGS=[...INDIAN_LANGS,...WORLD_LANGS];
 
-// Auto-detect audio language for a movie
-function getLang(m) {
-  if (m._prefAudio) return m._prefAudio; // use language page preference
-  const orig = m.original_language || 'en';
-  if (orig === 'en') return 'en';
-  return 'hi'; // all Indian languages default to Hindi dub
-}
-function getLangLabel(m) {
-  const ol = m.original_language || 'en';
-  const cfg = LANGS[ol];
-  if (!cfg) return `${ol.toUpperCase()} audio`;
-  if (ol === 'en') return '🌍 English audio';
-  if (['ta','te','kn','ml'].includes(ol)) return `${cfg.flag} ${cfg.name} → 🇮🇳 Hindi dub`;
-  return `${cfg.flag} ${cfg.name} audio`;
-}
-// ── LANGUAGES DATA ────────────────────────────────────────────
-const LANGUAGES = [
-  { code: 'hi', name: 'Hindi',       native: 'हिन्दी',     flag: '🇮🇳', color: '#f97316', audio: 'hi', count: '50K+ titles' },
-  { code: 'ta', name: 'Tamil',       native: 'தமிழ்',      flag: '🎬', color: '#ef4444', audio: 'hi', count: '8K+ titles' },
-  { code: 'te', name: 'Telugu',      native: 'తెలుగు',     flag: '🎭', color: '#f59e0b', audio: 'hi', count: '6K+ titles' },
-  { code: 'kn', name: 'Kannada',     native: 'ಕನ್ನಡ',      flag: '🌟', color: '#84cc16', audio: 'hi', count: '3K+ titles' },
-  { code: 'ml', name: 'Malayalam',   native: 'മലയാളം',     flag: '🌴', color: '#10b981', audio: 'hi', count: '4K+ titles' },
-  { code: 'en', name: 'English',     native: 'English',    flag: '🇺🇸', color: '#3b82f6', audio: 'en', count: '200K+ titles' },
-  { code: 'ko', name: 'Korean',      native: '한국어',      flag: '🇰🇷', color: '#8b5cf6', audio: 'ko', count: '15K+ titles' },
-  { code: 'ja', name: 'Japanese',    native: '日本語',      flag: '🇯🇵', color: '#ec4899', audio: 'ja', count: '20K+ titles' },
-  { code: 'zh', name: 'Chinese',     native: '中文',        flag: '🇨🇳', color: '#f43f5e', audio: 'zh', count: '12K+ titles' },
-  { code: 'fr', name: 'French',      native: 'Français',   flag: '🇫🇷', color: '#06b6d4', audio: 'fr', count: '18K+ titles' },
-  { code: 'es', name: 'Spanish',     native: 'Español',    flag: '🇪🇸', color: '#f59e0b', audio: 'es', count: '22K+ titles' },
-  { code: 'tr', name: 'Turkish',     native: 'Türkçe',     flag: '🇹🇷', color: '#14b8a6', audio: 'tr', count: '10K+ titles' },
-  { code: 'de', name: 'German',      native: 'Deutsch',    flag: '🇩🇪', color: '#6366f1', audio: 'de', count: '14K+ titles' },
-  { code: 'it', name: 'Italian',     native: 'Italiano',   flag: '🇮🇹', color: '#22c55e', audio: 'it', count: '9K+ titles' },
-  { code: 'th', name: 'Thai',        native: 'ภาษาไทย',    flag: '🇹🇭', color: '#a855f7', audio: 'th', count: '5K+ titles' },
-  { code: 'ar', name: 'Arabic',      native: 'العربية',    flag: '🇸🇦', color: '#eab308', audio: 'ar', count: '7K+ titles' },
+// ── STREAMING SOURCES ─────────────────────────────────────────
+const SRCS=[
+  {name:'VidCore',note:'4K · Zero ads',icon:'ti-crown',color:'#4ade80',
+    movie:(id,l)=>`https://vidcore.org/embed/movie/${id}${l?`?lang=${l}`:''}`,
+    tv:(id,s,e,l)=>`https://vidcore.org/embed/tv/${id}/${s}/${e}${l?`?lang=${l}`:''}`},
+  {name:'VixSrc',note:'Multi-audio · Hindi dub',icon:'ti-language',color:'#f97316',
+    movie:(id,l)=>`https://vixsrc.to/embed/movie/${id}${l?`?lang=${l}`:''}`,
+    tv:(id,s,e,l)=>`https://vixsrc.to/embed/tv/${id}/${s}/${e}${l?`?lang=${l}`:''}`},
+  {name:'Embed-API',note:'10+ sources in 1 player',icon:'ti-stack-2',color:'#60a5fa',
+    movie:(id)=>`https://player.embed-api.stream/?id=${id}`,
+    tv:(id,s,e)=>`https://player.embed-api.stream/?id=${id}&s=${s}&e=${e}`},
+  {name:'VidLink',note:'HD · Reliable',icon:'ti-player-play-filled',color:'#fb923c',
+    movie:(id)=>`https://vidlink.pro/movie/${id}`,
+    tv:(id,s,e)=>`https://vidlink.pro/tv/${id}/${s}/${e}`},
+  {name:'VidFast',note:'1080p · Fast CDN',icon:'ti-rocket',color:'#a78bfa',
+    movie:(id)=>`https://vidfast.vc/movie/${id}`,
+    tv:(id,s,e)=>`https://vidfast.vc/tv/${id}/${s}/${e}`},
+  {name:'VidZee',note:'4K · Multi-server',icon:'ti-sparkles',color:'#e879f9',
+    movie:(id)=>`https://player.vidzee.wtf/embed/movie/${id}`,
+    tv:(id,s,e)=>`https://player.vidzee.wtf/embed/tv/${id}/${s}/${e}`},
+  {name:'VIDEM',note:'Auto failover',icon:'ti-movie',color:'#34d399',
+    movie:(id)=>`https://videm.xyz/embed/movie/${id}`,
+    tv:(id,s,e)=>`https://videm.xyz/embed/tv/${id}/${s}/${e}`},
+  {name:'VidSrc2',note:'HLS · Auto-failover',icon:'ti-refresh',color:'#fbbf24',
+    movie:(id)=>`https://vidsrc2.ru/embed/movie?tmdb=${id}`,
+    tv:(id,s,e)=>`https://vidsrc2.ru/embed/tv?tmdb=${id}&season=${s}&episode=${e}`},
+  {name:'SuperEmbed',note:'10+ servers · Bollywood',icon:'ti-bolt',color:'#c084fc',
+    movie:(id)=>`https://multiembed.mov/?video_id=${id}&tmdb=1`,
+    tv:(id,s,e)=>`https://multiembed.mov/?video_id=${id}&tmdb=1&s=${s}&e=${e}`},
+  {name:'VidSrc.buzz',note:'HLS · Touch-friendly',icon:'ti-antenna',color:'#38bdf8',
+    movie:(id)=>`https://vidsrc.buzz/embed/movie?tmdb=${id}`,
+    tv:(id,s,e)=>`https://vidsrc.buzz/embed/tv?tmdb=${id}&season=${s}&episode=${e}`},
+  {name:'SmashyStream',note:'Fast load',icon:'ti-flame',color:'#f87171',
+    movie:(id)=>`https://embed.smashystream.com/playere.php?tmdb=${id}`,
+    tv:(id,s,e)=>`https://embed.smashystream.com/playere.php?tmdb=${id}&season=${s}&episode=${e}`},
 ];
 
-let curLang = null;
-let langSort = 'popularity.desc';
-let langPage = 1;
-
-// ── BUILD LANGUAGE PICKER ─────────────────────────────────────
-function buildLangGrid() {
-  const g = document.getElementById('lang-grid');
-  g.innerHTML = '';
-  LANGUAGES.forEach(lang => {
-    const d = document.createElement('div');
-    d.className = 'langcard';
-    d.style.setProperty('--lc', lang.color);
-    d.style.borderColor = lang.color + '44';
-    d.innerHTML = `
-      <div class="langcard-flag">${lang.flag}</div>
-      <div class="langcard-name">${lang.name}</div>
-      <div class="langcard-native">${lang.native}</div>
-      <div class="langcard-count">${lang.count}</div>`;
-    d.onclick = () => openLang(lang);
-    g.appendChild(d);
-  });
-}
-
-function showLangPicker() {
-  document.getElementById('lang-grid').style.display = 'grid';
-  document.getElementById('lang-results').style.display = 'none';
-  curLang = null;
-}
-
-async function openLang(lang) {
-  curLang = lang;
-  langSort = 'popularity.desc';
-  langPage = 1;
-
-  // Switch to results view
-  document.getElementById('lang-grid').style.display = 'none';
-  document.getElementById('lang-results').style.display = 'block';
-  document.getElementById('lang-results-title').textContent = `${lang.flag} ${lang.name} Movies`;
-
-  // Reset sort buttons
-  document.querySelectorAll('#lang-sort-bar .gp').forEach((b, i) => b.classList.toggle('on', i === 0));
-
-  await fetchLangMovies(true);
-}
-
-function setLangSort(sort, btn) {
-  langSort = sort;
-  langPage = 1;
-  document.querySelectorAll('#lang-sort-bar .gp').forEach(b => b.classList.remove('on'));
-  btn.classList.add('on');
-  fetchLangMovies(true);
-}
-
-async function fetchLangMovies(reset = false) {
-  const g = document.getElementById('lang-movies-grid');
-  if (reset) g.innerHTML = '<div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div>';
-
-  const data = await api('/discover/movie', {
-    with_original_language: curLang.code,
-    sort_by: langSort,
-    page: langPage,
-    'vote_count.gte': langSort === 'vote_average.desc' ? 100 : 10
-  });
-
-  const movies = data.results || [];
-  const totalPages = data.total_pages || 1;
-
-  if (reset) g.innerHTML = '';
-  if (!movies.length && reset) {
-    g.innerHTML = '<div class="emsg">No movies found for this language.</div>';
-    return;
-  }
-
-  // Attach audio language preference to each movie
-  movies.forEach(m => {
-    m.original_language = curLang.code;
-    m._prefAudio = curLang.audio;
-  });
-
-  movies.forEach(m => g.appendChild(card(m)));
-
-  // Show/hide load more
-  const btn = document.getElementById('lang-load-more');
-  btn.style.display = langPage < totalPages ? 'inline-block' : 'none';
-}
-
-async function loadMoreLang() {
-  langPage++;
-  await fetchLangMovies(false);
-}
-
-// ── STREAMING SOURCES ────────────────────────────────────────
-const SRCS = [
-  { name:'VidCore',     note:'4K · Zero ads',         icon:'ti-crown',             color:'#4ade80',
-    url:(id,tv,s,e,l)=>tv?`https://vidcore.org/embed/tv/${id}/${s}/${e}?lang=${l}&autoPlay=true`:`https://vidcore.org/embed/movie/${id}?lang=${l}&autoPlay=true` },
-  { name:'VixSrc',      note:'Hindi dub · South films',icon:'ti-language',          color:'#f97316',
-    url:(id,tv,s,e,l)=>tv?`https://vixsrc.to/embed/tv/${id}/${s}/${e}?lang=${l}`:`https://vixsrc.to/embed/movie/${id}?lang=${l}` },
-  { name:'Embed-API',   note:'10+ sources in 1 player',icon:'ti-stack-2',           color:'#60a5fa',
-    url:(id,tv,s,e,l)=>tv?`https://player.embed-api.stream/?id=${id}&s=${s}&e=${e}`:`https://player.embed-api.stream/?id=${id}` },
-  { name:'VidLink',     note:'HD · Reliable',          icon:'ti-player-play-filled',color:'#fb923c',
-    url:(id,tv,s,e,l)=>tv?`https://vidlink.pro/tv/${id}/${s}/${e}`:`https://vidlink.pro/movie/${id}` },
-  { name:'VidFast',     note:'1080p · Fast CDN',        icon:'ti-rocket',            color:'#a78bfa',
-    url:(id,tv,s,e,l)=>tv?`https://vidfast.vc/tv/${id}/${s}/${e}`:`https://vidfast.vc/movie/${id}` },
-  { name:'VidZee',      note:'4K · Multi-server',       icon:'ti-sparkles',          color:'#e879f9',
-    url:(id,tv,s,e,l)=>tv?`https://player.vidzee.wtf/embed/tv/${id}/${s}/${e}`:`https://player.vidzee.wtf/embed/movie/${id}` },
-  { name:'VIDEM',       note:'Auto failover',           icon:'ti-movie',             color:'#34d399',
-    url:(id,tv,s,e,l)=>tv?`https://videm.xyz/embed/tv/${id}/${s}/${e}`:`https://videm.xyz/embed/movie/${id}` },
-  { name:'VidSrc2',     note:'HLS · Auto-failover',     icon:'ti-refresh',           color:'#fbbf24',
-    url:(id,tv,s,e,l)=>tv?`https://vidsrc2.ru/embed/tv?tmdb=${id}&season=${s}&episode=${e}`:`https://vidsrc2.ru/embed/movie?tmdb=${id}` },
-  { name:'SuperEmbed',  note:'10+ servers · Bollywood', icon:'ti-bolt',              color:'#c084fc',
-    url:(id,tv,s,e,l)=>tv?`https://multiembed.mov/?video_id=${id}&tmdb=1&s=${s}&e=${e}`:`https://multiembed.mov/?video_id=${id}&tmdb=1` },
-  { name:'VidSrc.buzz', note:'HLS · Touch-friendly',    icon:'ti-antenna',           color:'#38bdf8',
-    url:(id,tv,s,e,l)=>tv?`https://vidsrc.buzz/embed/tv?tmdb=${id}&season=${s}&episode=${e}`:`https://vidsrc.buzz/embed/movie?tmdb=${id}` },
-  { name:'SmashyStream',note:'Fast load',               icon:'ti-flame',             color:'#f87171',
-    url:(id,tv,s,e,l)=>tv?`https://embed.smashystream.com/playere.php?tmdb=${id}&season=${s}&episode=${e}`:`https://embed.smashystream.com/playere.php?tmdb=${id}` },
-];
-
-// ── STATE ────────────────────────────────────────────────────
-let hero=null, cur=null, curS=1, curE=1, prevTab='home';
-let btype='movie', stimer=null, curLang='hi', curLangGenre=0;
+// ── STATE ─────────────────────────────────────────────────────
+let hero=null,cur=null,curS=1,curE=1,prevTab='home',btype='movie',stimer=null;
+let activeLang=null; // selected language filter code
+let audioPref='original'; // 'original' | 'hi' | 'en'
 let wl=[];
-try{ wl=JSON.parse(localStorage.getItem('cmx_wl')||'[]'); }catch(e){}
+try{wl=JSON.parse(localStorage.getItem('cmx_wl3')||'[]');}catch(e){}
+try{audioPref=localStorage.getItem('cmx_audio')||'original';}catch(e){}
 
-// ── TMDB API ─────────────────────────────────────────────────
-async function api(path, p={}) {
-  try {
-    const q = new URLSearchParams({api_key:KEY,...p});
-    const r = await fetch(`${TMDB}${path}?${q}`);
-    if(!r.ok) throw 0;
-    return r.json();
-  } catch(e) { return {results:[],seasons:[],episodes:[]}; }
+// ── AUDIO LOGIC ───────────────────────────────────────────────
+const INDIAN_CODES=['hi','ta','te','kn','ml','mr','pa','bn'];
+function getAudioLang(m){
+  const orig=m.original_language||'en';
+  if(audioPref==='hi') return 'hi';
+  if(audioPref==='en') return 'en';
+  // 'original' mode: English films play in English, Indian films in original
+  return orig;
 }
-const isTV  = m => m.first_air_date!==undefined || m.media_type==='tv';
-const T     = m => m.title||m.name||'Untitled';
-const Y     = m => (m.release_date||m.first_air_date||'').slice(0,4);
-const esc   = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-const noImg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='300'%3E%3Crect fill='%231c1c28' width='200' height='300'/%3E%3C/svg%3E";
-const pimg  = p => p ? `${IMG}w300${p}` : noImg;
+function getAudioLabel(m){
+  if(!m) return 'Auto';
+  const lang=getAudioLang(m);
+  const found=ALL_LANGS.find(l=>l.code===lang);
+  return found?`${found.flag} ${found.name}`:`${lang.toUpperCase()}`;
+}
+function setAudioPref(pref,btn){
+  audioPref=pref;
+  try{localStorage.setItem('cmx_audio',pref);}catch(e){}
+  document.querySelectorAll('.audio-opt').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  toast(`Audio: ${pref==='original'?'Original Language':pref==='hi'?'Hindi Dubbed':'English Dubbed'}`,'ti-volume');
+}
+function restoreAudioPref(){
+  document.querySelectorAll('.audio-opt').forEach(b=>b.classList.remove('on'));
+  const map={original:'opt-original',hi:'opt-hindi',en:'opt-english'};
+  const el=document.getElementById(map[audioPref]||'opt-original');
+  if(el) el.classList.add('on');
+}
 
-// ── SOURCE GRID ──────────────────────────────────────────────
-function buildSrcGrid() {
-  const g = document.getElementById('srcgrid');
-  g.innerHTML = '';
-  const tv = isTV(cur);
-  const lang = getLang(cur);
-  const label = getLangLabel(cur);
+// ── TMDB API ──────────────────────────────────────────────────
+async function api(path,p={}){
+  try{const q=new URLSearchParams({api_key:KEY,...p});const r=await fetch(`${TMDB}${path}?${q}`);if(!r.ok)throw 0;return r.json();}
+  catch(e){return{results:[],seasons:[],episodes:[]};}
+}
+const isTV=m=>m.first_air_date!==undefined||m.media_type==='tv';
+const T=m=>m.title||m.name||'Untitled';
+const Y=m=>(m.release_date||m.first_air_date||'').slice(0,4);
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const noImg="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='300'%3E%3Crect fill='%231c1c28' width='200' height='300'/%3E%3C/svg%3E";
+const pimg=p=>p?`${IMG}w300${p}`:noImg;
 
-  // Update language notice
-  document.getElementById('lang-notice-text').innerHTML =
-    `<strong>Audio:</strong> ${label} — sources will try to load this audio track automatically`;
-
-  SRCS.forEach(s => {
-    const url = s.url(cur.id, tv, curS, curE, lang);
-    const d = document.createElement('div');
-    d.className = 'srccard';
-    d.setAttribute('role','listitem');
-    d.style.setProperty('--sc', s.color);
-    d.innerHTML = `<i class="ti ${s.icon} sc-icon"></i><div class="sc-name">${s.name}</div><div class="sc-note">${s.note}</div>`;
-    d.onclick = () => { window.open(url,'_blank','noopener,noreferrer'); toast(`Opening ${s.name}…`,'ti-external-link'); };
+// ── SOURCE GRID ───────────────────────────────────────────────
+function buildSrcGrid(){
+  const g=document.getElementById('srcgrid');g.innerHTML='';
+  const lang=cur?getAudioLang(cur):null;
+  // Update audio indicator
+  document.getElementById('audio-label').textContent=cur?getAudioLabel(cur):'Auto';
+  SRCS.forEach(s=>{
+    const url=isTV(cur)?s.tv(cur.id,curS,curE,lang):s.movie(cur.id,lang);
+    const d=document.createElement('div');d.className='srccard';
+    d.style.setProperty('--sc',s.color);
+    d.innerHTML=`<i class="ti ${s.icon} sc-icon"></i><div class="sc-name">${s.name}</div><div class="sc-note">${s.note}</div>`;
+    d.onclick=()=>{window.open(url,'_blank','noopener,noreferrer');toast(`Opening ${s.name}…`,'ti-external-link');};
     g.appendChild(d);
   });
 }
 
-// ── NAVIGATION ───────────────────────────────────────────────
-function showPg(name) {
+// ── NAVIGATION ────────────────────────────────────────────────
+function showPg(name){
   document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
   document.getElementById(name+'-pg').classList.add('on');
-  document.querySelectorAll('.ntab,.mnbtn').forEach(t=>t.classList.toggle('on',t.dataset.tab===name));
+  document.querySelectorAll('.ntab,.mnav-btn').forEach(t=>t.classList.toggle('on',t.dataset.tab===name));
   window.scrollTo({top:0,behavior:'smooth'});
 }
-function switchTab(name) {
+function switchTab(name){
   document.getElementById('si').value='';
   if(name==='browse') loadBrowse();
   if(name==='watchlist') renderWL();
-  if (name === 'languages') buildLangGrid(); // ← ADD THIS LINE
-
-  showPg(name); prevTab=name;
+  if(name==='lang'){buildLangPage();restoreAudioPref();}
+  showPg(name);prevTab=name;
 }
-function go(n) { switchTab(n); }
-function goBack() { showPg(prevTab||'home'); }
+function go(n){switchTab(n);}
+function goBack(){showPg(prevTab||'home');}
 
-// ── TOAST ────────────────────────────────────────────────────
+// ── TOAST ─────────────────────────────────────────────────────
 let tt;
-function toast(msg,ico='ti-check') {
+function toast(msg,ico='ti-check'){
   document.getElementById('tico').className='ti '+ico;
   document.getElementById('tmsg').textContent=msg;
-  const t=document.getElementById('toast');
-  t.classList.add('on');
-  clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('on'),2300);
+  const t=document.getElementById('toast');t.classList.add('on');
+  clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2300);
 }
 
-// ── WATCHLIST ────────────────────────────────────────────────
-function saveWL() {
-  try{localStorage.setItem('cmx_wl',JSON.stringify(wl));}catch(e){}
-  const c=wl.length;
-  ['wlbadge','wlbadge2'].forEach(id=>{
-    const b=document.getElementById(id);
-    if(b){b.textContent=c||'';b.style.display=c?'inline':'none';}
-  });
+// ── WATCHLIST ─────────────────────────────────────────────────
+function saveWL(){
+  try{localStorage.setItem('cmx_wl3',JSON.stringify(wl));}catch(e){}
+  const count=wl.length;
+  ['wlbadge','wlbadge2'].forEach(id=>{const b=document.getElementById(id);if(b){b.textContent=count||'';b.style.display=count?'inline':'none';}});
 }
-const inWL = m => wl.some(x=>x.id===m.id);
-function toggleWL(m) {
-  if(inWL(m)){wl=wl.filter(x=>x.id!==m.id);toast('Removed from Watchlist','ti-bookmark-off');}
-  else{wl.unshift(m);toast('Saved to Watchlist!','ti-bookmark');}
-  saveWL();
-}
-function toggleWLcur() { if(cur){toggleWL(cur);updWLbtn();} }
-function updWLbtn() {
-  if(!cur) return;
-  const s=inWL(cur);
-  const b=document.getElementById('wlbtn2');
-  s?b.classList.add('sv'):b.classList.remove('sv');
-  document.getElementById('wlico2').className='ti ti-bookmark'+(s?'-filled':'');
-  document.getElementById('wltxt2').textContent=s?'✓ Saved':'Save to Watchlist';
-}
-function renderWL() {
-  const c=document.getElementById('wlcontent');
-  if(!wl.length){c.innerHTML='<div id="wlempty"><i class="ti ti-bookmark-off"></i>Nothing saved yet.</div>';return;}
-  c.innerHTML='<div class="mgrid" id="wlgrid"></div>';
-  wl.forEach(m=>document.getElementById('wlgrid').appendChild(card(m)));
-}
+const inWL=m=>wl.some(x=>x.id===m.id);
+function toggleWL(m){if(inWL(m)){wl=wl.filter(x=>x.id!==m.id);toast('Removed','ti-bookmark-off');}else{wl.unshift(m);toast('Saved!','ti-bookmark');}saveWL();}
+function toggleWLcur(){if(cur){toggleWL(cur);updWLbtn();}}
+function updWLbtn(){if(!cur)return;const s=inWL(cur);const b=document.getElementById('wlbtn2');s?b.classList.add('sv'):b.classList.remove('sv');document.getElementById('wlico2').className='ti ti-bookmark'+(s?'-filled':'');document.getElementById('wltxt2').textContent=s?'✓ Saved':'Save to Watchlist';}
+function renderWL(){const c=document.getElementById('wlcontent');if(!wl.length){c.innerHTML='<div id="wlempty"><i class="ti ti-bookmark-off"></i>Nothing saved yet.</div>';return;}c.innerHTML='<div class="mgrid" id="wlgrid"></div>';wl.forEach(m=>document.getElementById('wlgrid').appendChild(card(m)));}
 
-// ── HERO ─────────────────────────────────────────────────────
-function heroPlay() { if(hero) openDetail(hero); }
-function heroWL() {
-  if(!hero) return; toggleWL(hero);
-  document.getElementById('hwlico').className='ti ti-bookmark'+(inWL(hero)?'-filled':'');
-}
-function setHero(m) {
-  hero=m; if(!m.backdrop_path) return;
+// ── HERO ──────────────────────────────────────────────────────
+function heroPlay(){if(hero)openDetail(hero);}
+function heroWL(){if(!hero)return;toggleWL(hero);document.getElementById('hwlico').className='ti ti-bookmark'+(inWL(hero)?'-filled':'');}
+function setHero(m){
+  hero=m;if(!m.backdrop_path)return;
   document.getElementById('hbg').style.backgroundImage=`url(${IMG}w1280${m.backdrop_path})`;
   document.getElementById('htitle').textContent=T(m);
-  const parts=[Y(m),m.vote_average?'★ '+m.vote_average.toFixed(1):'',isTV(m)?'TV':'Movie'].filter(Boolean);
+  const parts=[Y(m),m.vote_average?'★ '+m.vote_average.toFixed(1):'',isTV(m)?'TV Series':'Movie'].filter(Boolean);
   document.getElementById('hmeta').innerHTML=parts.map((p,i)=>`<span>${p}</span>${i<parts.length-1?'<div class="hdot"></div>':''}`).join('');
   document.getElementById('hoverview').textContent=m.overview||'';
   document.getElementById('hwlico').className='ti ti-bookmark'+(inWL(m)?'-filled':'');
   document.getElementById('htag').textContent=isTV(m)?'Trending TV':'Trending';
 }
 
-// ── CARD ─────────────────────────────────────────────────────
-function card(m) {
-  const d=document.createElement('div'); d.className='mc';
+// ── CARD ──────────────────────────────────────────────────────
+function card(m){
+  const d=document.createElement('div');d.className='mc';
   const tv=isTV(m),r=m.vote_average?m.vote_average.toFixed(1):'',s=inWL(m);
   d.innerHTML=`<img src="${pimg(m.poster_path)}" alt="${esc(T(m))}" loading="lazy"/>
     ${r?`<div class="mcr">★${r}</div>`:''}
     ${tv?'<div class="mctype">TV</div>':''}
-    <button class="wbtn${s?' sv':''}" aria-label="Watchlist"><i class="ti ti-bookmark${s?'-filled':''}"></i></button>
+    <button class="wbtn${s?' sv':''}" aria-label="Save"><i class="ti ti-bookmark${s?'-filled':''}"></i></button>
     <div class="mci"><div class="mct">${esc(T(m))}</div><div class="mcs">${Y(m)||'—'}</div></div>`;
-  d.querySelector('.wbtn').addEventListener('click',e=>{
-    e.stopPropagation(); toggleWL(m);
-    const b=e.currentTarget,sv=inWL(m);
-    b.className='wbtn'+(sv?' sv':'');
-    b.querySelector('i').className='ti ti-bookmark'+(sv?'-filled':'');
-    if(document.getElementById('watchlist-pg').classList.contains('on')) renderWL();
-  });
+  d.querySelector('.wbtn').addEventListener('click',e=>{e.stopPropagation();toggleWL(m);const b=e.currentTarget,sv=inWL(m);b.className='wbtn'+(sv?' sv':'');b.querySelector('i').className='ti ti-bookmark'+(sv?'-filled':'');if(document.getElementById('watchlist-pg').classList.contains('on'))renderWL();});
   d.addEventListener('click',()=>openDetail(m));
   return d;
 }
-function fillGrid(id,movies) {
-  const g=document.getElementById(id); if(!g) return;
-  g.innerHTML='';
-  if(!movies||!movies.length){g.innerHTML='<div class="emsg">Nothing found.</div>';return;}
-  movies.slice(0,20).forEach(m=>g.appendChild(card(m)));
-}
+function fillGrid(id,movies){const g=document.getElementById(id);if(!g)return;g.innerHTML='';if(!movies||!movies.length){g.innerHTML='<div class="emsg">Nothing found.</div>';return;}movies.slice(0,20).forEach(m=>g.appendChild(card(m)));}
 
-// ── HOME ─────────────────────────────────────────────────────
-async function loadHome() {
-  const[tM,tTV,tR]=await Promise.all([
-    api('/trending/movie/week'),
-    api('/trending/tv/week'),
-    api('/movie/top_rated')
-  ]);
-  if((tM.results||[]).length) setHero(tM.results[0]);
+// ── HOME ──────────────────────────────────────────────────────
+async function loadHome(){
+  const[tM,tTV,tR]=await Promise.all([api('/trending/movie/week'),api('/trending/tv/week'),api('/movie/top_rated')]);
+  if((tM.results||[]).length)setHero(tM.results[0]);
   fillGrid('tr-movies',tM.results||[]);
   fillGrid('tr-tv',tTV.results||[]);
   fillGrid('toprated',tR.results||[]);
 }
 
-// ── BROWSE ───────────────────────────────────────────────────
+// ── BROWSE ────────────────────────────────────────────────────
 const GM=[{id:28,n:'Action'},{id:35,n:'Comedy'},{id:27,n:'Horror'},{id:878,n:'Sci-Fi'},{id:18,n:'Drama'},{id:53,n:'Thriller'},{id:16,n:'Animation'},{id:12,n:'Adventure'},{id:10749,n:'Romance'},{id:80,n:'Crime'},{id:14,n:'Fantasy'},{id:99,n:'Documentary'}];
 const GT=[{id:10759,n:'Action'},{id:35,n:'Comedy'},{id:18,n:'Drama'},{id:9648,n:'Mystery'},{id:10765,n:'Sci-Fi'},{id:80,n:'Crime'},{id:10762,n:'Kids'},{id:10768,n:'War'}];
-function setBT(t,btn) {
-  btype=t;
-  document.querySelectorAll('.tp').forEach(b=>b.classList.remove('on'));
-  btn.classList.add('on'); renderGenres();
+function setBT(t,btn){btype=t;document.querySelectorAll('.tp').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderGenres();}
+function renderGenres(){const row=document.getElementById('grow');row.innerHTML='';const gs=btype==='movie'?GM:GT;gs.forEach((g,i)=>{const b=document.createElement('button');b.className='gp'+(i===0?' on':'');b.textContent=g.n;b.onclick=()=>{document.querySelectorAll('.gp').forEach(x=>x.classList.remove('on'));b.classList.add('on');loadGenre(g.id);};row.appendChild(b);});loadGenre(gs[0].id);}
+function loadBrowse(){renderGenres();}
+async function loadGenre(id){document.getElementById('bgrid').innerHTML='<div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div>';const d=await api('/discover/'+btype,{with_genres:id,sort_by:'popularity.desc'});fillGrid('bgrid',d.results||[]);}
+
+// ── LANGUAGE PAGE ─────────────────────────────────────────────
+function buildLangPage(){
+  buildLangGrid('indian-langs',INDIAN_LANGS);
+  buildLangGrid('world-langs',WORLD_LANGS);
 }
-function renderGenres() {
-  const row=document.getElementById('grow'); row.innerHTML='';
-  const gs=btype==='movie'?GM:GT;
-  gs.forEach((g,i)=>{
-    const b=document.createElement('button'); b.className='gp'+(i===0?' on':''); b.textContent=g.n;
-    b.onclick=()=>{document.querySelectorAll('.gp').forEach(x=>x.classList.remove('on'));b.classList.add('on');loadGenre(g.id);};
-    row.appendChild(b);
+function buildLangGrid(containerId,langs){
+  const c=document.getElementById(containerId);
+  if(c.children.length) return; // already built
+  langs.forEach(l=>{
+    const d=document.createElement('div');
+    d.className='lang-card'+(activeLang===l.code?' on':'');
+    d.style.setProperty('--lc',l.color);
+    d.innerHTML=`<span class="lang-flag">${l.flag}</span><div class="lang-name">${l.name}</div><div class="lang-native">${l.native}</div><div class="lang-count">${l.desc}</div><div class="lang-selected-badge">SELECTED</div>`;
+    d.onclick=()=>selectLang(l,d);
+    c.appendChild(d);
   });
-  loadGenre(gs[0].id);
 }
-function loadBrowse() { renderGenres(); }
-async function loadGenre(id) {
-  document.getElementById('bgrid').innerHTML='<div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div>';
-  const d=await api('/discover/'+btype,{with_genres:id,sort_by:'popularity.desc'});
-  fillGrid('bgrid',d.results||[]);
-}
-
-// ── LANGUAGES PAGE ───────────────────────────────────────────
-const LANG_GENRES=[
-  {id:0,   n:'All'},
-  {id:28,  n:'Action'},
-  {id:35,  n:'Comedy'},
-  {id:18,  n:'Drama'},
-  {id:27,  n:'Horror'},
-  {id:10749,n:'Romance'},
-  {id:53,  n:'Thriller'},
-  {id:878, n:'Sci-Fi'},
-  {id:12,  n:'Adventure'},
-];
-
-let langLoaded = false;
-
-function loadLangPage() {
-  if(!langLoaded) {
-    langLoaded=true;
-    buildLangGenres();
-    loadLangGrid();
+async function selectLang(l,el){
+  // Toggle off if already selected
+  if(activeLang===l.code){
+    activeLang=null;
+    document.querySelectorAll('.lang-card').forEach(c=>c.classList.remove('on'));
+    document.getElementById('lang-movies-sec').style.display='none';
+    document.getElementById('lang-tv-sec').style.display='none';
+    toast(`Cleared language filter`,'ti-x');
+    return;
   }
+  activeLang=l.code;
+  document.querySelectorAll('.lang-card').forEach(c=>c.classList.remove('on'));
+  el.classList.add('on');
+  toast(`${l.flag} Showing ${l.name} content`,'ti-language');
+
+  // Show sections and load
+  const msec=document.getElementById('lang-movies-sec');
+  const tsec=document.getElementById('lang-tv-sec');
+  msec.style.display='block';tsec.style.display='block';
+  document.getElementById('lang-movies-title').textContent=`${l.flag} ${l.name} Movies`;
+  document.getElementById('lang-tv-title').textContent=`${l.flag} ${l.name} TV Shows`;
+  document.getElementById('lang-movies-grid').innerHTML='<div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div>';
+  document.getElementById('lang-tv-grid').innerHTML='<div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div>';
+
+  const [movies,tv]=await Promise.all([
+    api('/discover/movie',{with_original_language:l.code,sort_by:'popularity.desc',page:1}),
+    api('/discover/tv',{with_original_language:l.code,sort_by:'popularity.desc',page:1})
+  ]);
+  fillGrid('lang-movies-grid',movies.results||[]);
+  fillGrid('lang-tv-grid',tv.results||[]);
+
+  // Scroll to results
+  setTimeout(()=>msec.scrollIntoView({behavior:'smooth'}),200);
 }
 
-function buildLangGenres() {
-  const row=document.getElementById('lang-genre-row'); row.innerHTML='';
-  LANG_GENRES.forEach((g,i)=>{
-    const b=document.createElement('button');
-    b.className='lgp'+(i===0?' on':''); b.textContent=g.n;
-    b.onclick=()=>{
-      document.querySelectorAll('.lgp').forEach(x=>x.classList.remove('on'));
-      b.classList.add('on'); curLangGenre=g.id; loadLangGrid();
-    };
-    row.appendChild(b);
-  });
-}
-
-function selectLang(btn, lang, name) {
-  curLang=lang; langLoaded=true;
-  document.querySelectorAll('.ltab').forEach(t=>t.classList.remove('on'));
-  btn.classList.add('on');
-  curLangGenre=0;
-  // Reset genre pills
-  document.querySelectorAll('.lgp').forEach((b,i)=>b.classList.toggle('on',i===0));
-  loadLangGrid();
-}
-
-async function loadLangGrid() {
-  const g=document.getElementById('lang-grid');
-  g.innerHTML='<div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div>';
-  const params={
-    with_original_language: curLang,
-    sort_by:'popularity.desc',
-    'vote_count.gte':50
-  };
-  if(curLangGenre) params.with_genres=curLangGenre;
-  const d=await api('/discover/movie',params);
-  fillGrid('lang-grid',d.results||[]);
-}
-
-// ── SEARCH ───────────────────────────────────────────────────
+// ── SEARCH ────────────────────────────────────────────────────
 document.getElementById('si').addEventListener('input',function(){
-  clearTimeout(stimer); const q=this.value.trim();
+  clearTimeout(stimer);const q=this.value.trim();
   if(!q){showPg(prevTab||'home');return;}
   stimer=setTimeout(()=>doSearch(q),360);
 });
-async function doSearch(q) {
+async function doSearch(q){
   showPg('search');
   document.getElementById('slbl').textContent=`Results for "${q}"`;
   document.getElementById('sgrid').innerHTML='<div class="spinner"><i class="ti ti-loader-2"></i>Searching…</div>';
@@ -922,10 +685,10 @@ async function doSearch(q) {
   fillGrid('sgrid',res);
 }
 
-// ── DETAIL ───────────────────────────────────────────────────
-async function openDetail(m) {
-  cur=m; curS=1; curE=1;
-  prevTab=document.querySelector('.ntab.on,.mnbtn.on')?.dataset.tab||'home';
+// ── DETAIL ────────────────────────────────────────────────────
+async function openDetail(m){
+  cur=m;curS=1;curE=1;
+  prevTab=document.querySelector('.ntab.on,.mnav-btn.on')?.dataset.tab||'home';
   showPg('detail');
 
   document.getElementById('dhbg').style.backgroundImage=m.backdrop_path?`url(${IMG}w1280${m.backdrop_path})`:'';
@@ -934,61 +697,51 @@ async function openDetail(m) {
   document.getElementById('dtitle').textContent=T(m);
   document.getElementById('doverview').textContent=m.overview||'';
 
-  const meta=document.getElementById('dmeta'); meta.innerHTML='';
+  const meta=document.getElementById('dmeta');meta.innerHTML='';
   const addB=(t,c='')=>{const s=document.createElement('span');s.className='db '+c;s.textContent=t;meta.appendChild(s);};
-  if(Y(m)) addB(Y(m));
-  if(m.vote_average) addB('★ '+m.vote_average.toFixed(1),'gold');
+  if(Y(m))addB(Y(m));
+  if(m.vote_average)addB('★ '+m.vote_average.toFixed(1),'gold');
   addB(isTV(m)?'TV Series':'Movie','red');
-  // Language badge
-  const ol=m.original_language||'en';
-  const lcfg=LANGS[ol];
-  if(lcfg) addB(`${lcfg.flag} ${lcfg.name}`,'lang');
-  else if(ol) addB(ol.toUpperCase(),'lang');
+  if(m.original_language){
+    const lf=ALL_LANGS.find(l=>l.code===m.original_language);
+    addB(lf?`${lf.flag} ${lf.name}`:m.original_language.toUpperCase(),'blue');
+  }
 
   updWLbtn();
   buildSrcGrid();
 
   const ep=document.getElementById('epsec');
-  if(isTV(m)){ep.classList.add('vis');loadSeasons(m.id);}
-  else ep.classList.remove('vis');
+  if(isTV(m)){ep.classList.add('vis');loadSeasons(m.id);}else ep.classList.remove('vis');
 
   const rel=await api(`/${isTV(m)?'tv':'movie'}/${m.id}/similar`);
   fillGrid('relgrid',rel.results||[]);
 }
 
-// ── TV SEASONS & EPISODES ────────────────────────────────────
-async function loadSeasons(tvId) {
+async function loadSeasons(tvId){
   const det=await api(`/tv/${tvId}`);
   const seasons=(det.seasons||[]).filter(s=>s.season_number>0);
-  const bar=document.getElementById('sbar'); bar.innerHTML='';
+  const bar=document.getElementById('sbar');bar.innerHTML='';
   seasons.forEach((s,i)=>{
-    const b=document.createElement('button');
-    b.className='sbn'+(i===0?' on':''); b.textContent='S'+s.season_number;
+    const b=document.createElement('button');b.className='sbn'+(i===0?' on':'');b.textContent='S'+s.season_number;
     b.onclick=()=>{document.querySelectorAll('.sbn').forEach(x=>x.classList.remove('on'));b.classList.add('on');curS=s.season_number;loadEps(tvId,s.season_number);};
     bar.appendChild(b);
   });
   if(seasons.length){curS=seasons[0].season_number;loadEps(tvId,seasons[0].season_number);}
 }
-async function loadEps(tvId,sn) {
+async function loadEps(tvId,sn){
   const g=document.getElementById('epgrid');
-  g.innerHTML='<div class="spinner"><i class="ti ti-loader-2"></i>Loading episodes…</div>';
-  const d=await api(`/tv/${tvId}/season/${sn}`);
-  g.innerHTML='';
+  g.innerHTML='<div class="spinner"><i class="ti ti-loader-2"></i>Loading…</div>';
+  const d=await api(`/tv/${tvId}/season/${sn}`);g.innerHTML='';
   (d.episodes||[]).forEach((ep,i)=>{
-    const div=document.createElement('div'); div.className='epc'+(i===0?' on':'');
-    const thumb=ep.still_path?`${IMG}w300${ep.still_path}`:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='43'%3E%3Crect fill='%231c1c28' width='70' height='43'/%3E%3C/svg%3E";
+    const div=document.createElement('div');div.className='epc'+(i===0?' on':'');
+    const thumb=ep.still_path?`${IMG}w300${ep.still_path}`:"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='68' height='42'%3E%3Crect fill='%231c1c28' width='68' height='42'/%3E%3C/svg%3E";
     div.innerHTML=`<img class="epthumb" src="${thumb}" loading="lazy"/><div class="epinfo"><div class="epnum">EP ${ep.episode_number}</div><div class="epname">${esc(ep.name||'Episode '+ep.episode_number)}</div><div class="epair">${ep.air_date||''}</div></div>`;
-    div.onclick=()=>{
-      document.querySelectorAll('.epc').forEach(c=>c.classList.remove('on'));
-      div.classList.add('on'); curS=sn; curE=ep.episode_number;
-      buildSrcGrid();
-      document.getElementById('srcsec').scrollIntoView({behavior:'smooth'});
-    };
+    div.onclick=()=>{document.querySelectorAll('.epc').forEach(c=>c.classList.remove('on'));div.classList.add('on');curS=sn;curE=ep.episode_number;buildSrcGrid();document.getElementById('srcsec').scrollIntoView({behavior:'smooth'});};
     g.appendChild(div);
   });
 }
 
-// ── INIT ─────────────────────────────────────────────────────
+// ── INIT ──────────────────────────────────────────────────────
 saveWL();
 loadHome();
 </script>
